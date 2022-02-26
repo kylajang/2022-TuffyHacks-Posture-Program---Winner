@@ -5,11 +5,12 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:posture"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="Posture Corrector" Height="450" Width="800" ResizeMode="NoResize"
+        WindowStartupLocation="CenterScreen">
     <Grid>
         <Rectangle HorizontalAlignment="Center" Height="434" VerticalAlignment="Center" Width="800" Stroke="Black" Fill="#FFD2B488"/>
         <Label Content="Hello! Welcome to the posture-corrector application!" HorizontalAlignment="Center" Height="35" Margin="0,20,0,0" VerticalAlignment="Top" Width="528" FontFamily="Bahnschrift" FontSize="20"/>
-        <Button Content="Click To Start >>" HorizontalAlignment="Center" Height="21" Margin="0,162,0,0" VerticalAlignment="Top" Width="140" Background="White" Click="Button_Click" FontFamily="Bahnschrift"/>
+        <Button Name="startStopButton" Content="Click To Start >>" HorizontalAlignment="Center" Height="21" Margin="0,162,0,0" VerticalAlignment="Top" Width="140" Background="White" Click="Button_Click" FontFamily="Bahnschrift"/>
         <Label Content="Please answer the following survey questions before beginning." HorizontalAlignment="Center" Height="30" Margin="0,55,0,0" VerticalAlignment="Top" Width="364" FontFamily="Bahnschrift"/>
         <Label Content="Do you think you have good posture?" HorizontalAlignment="Left" Height="30" Margin="155,90,0,0" VerticalAlignment="Top" Width="211" FontFamily="Bahnschrift"/>
         <Label Content="About how long do you sit?" HorizontalAlignment="Left" Height="30" Margin="199,117,0,0" VerticalAlignment="Top" Width="334" FontFamily="Bahnschrift"/>
@@ -17,8 +18,8 @@
         <CheckBox x:Name= "badposture" Content="No" HorizontalAlignment="Left" Margin="516,93,0,0" VerticalAlignment="Top" FontFamily="Bahnschrift"/>
         <CheckBox x:Name= "morethanthree" Content="More than 3hrs" HorizontalAlignment="Left" Margin="516,124,0,0" VerticalAlignment="Top" FontFamily="Bahnschrift" RenderTransformOrigin="0.027,0.83"/>
         <CheckBox x:Name= "lessthanthree" Content="Less than 3hrs" HorizontalAlignment="Left" Margin="391,124,0,0" VerticalAlignment="Top" FontFamily="Bahnschrift"/>
-        <Label x:Name="rightthigh" Content="Right Thigh Output: " HorizontalAlignment="Left" Margin="76,246,0,0" VerticalAlignment="Top" FontSize="16" FontFamily="Times New Roman"/>
-        <Label x:Name="leftthigh" Content="Left Thigh Output: " HorizontalAlignment="Left" Margin="528,246,0,0" VerticalAlignment="Top" FontSize="16" FontFamily="Times New Roman"/>
+        <Label x:Name="rightthigh" Content="Right Thigh Output: " HorizontalAlignment="Left" Margin="533,255,0,0" VerticalAlignment="Top" FontSize="16" FontFamily="Times New Roman"/>
+        <Label x:Name="leftthigh" Content="Left Thigh Output: " HorizontalAlignment="Left" Margin="81,255,0,0" VerticalAlignment="Top" FontSize="16" FontFamily="Times New Roman"/>
         <Label x:Name="rightbutt" Content="Right Butt Output: " HorizontalAlignment="Left" Margin="529,353,0,0" VerticalAlignment="Top" FontSize="16" FontFamily="Times New Roman"/>
         <Label x:Name="leftbutt" Content="Left Butt Output: " HorizontalAlignment="Left" Margin="86,353,0,0" VerticalAlignment="Top" FontSize="16" FontFamily="Times New Roman"/>
         <Label x:Name="userdirection" Content="User Direction: " HorizontalAlignment="Left" Margin="330,260,0,0" VerticalAlignment="Top" FontSize="16" FontFamily="Times New Roman"/>
