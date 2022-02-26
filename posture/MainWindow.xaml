@@ -7,7 +7,16 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
     <Grid>
-        <Label x:Name="sensorOutput" Content="Sensor Output: " HorizontalAlignment="Left" Margin="82,52,0,0" VerticalAlignment="Top" FontSize="16"/>
+        <Rectangle HorizontalAlignment="Center" Height="434" VerticalAlignment="Center" Width="800" Stroke="Black" Fill="#FFD2B488"/>
+        <Label Content="Hello! Welcome to the posture-corrector application!" HorizontalAlignment="Center" Height="35" Margin="0,20,0,0" VerticalAlignment="Top" Width="528" FontFamily="Bahnschrift" FontSize="20"/>
+        <Button Content="Click To Start >>" HorizontalAlignment="Center" Height="21" Margin="0,162,0,0" VerticalAlignment="Top" Width="140" Background="White" Click="Button_Click" FontFamily="Bahnschrift"/>
+        <Label Content="Please answer the following survey questions before beginning." HorizontalAlignment="Center" Height="30" Margin="0,55,0,0" VerticalAlignment="Top" Width="364" FontFamily="Bahnschrift"/>
+        <Label Content="Do you think you have good posture?" HorizontalAlignment="Left" Height="30" Margin="155,90,0,0" VerticalAlignment="Top" Width="211" FontFamily="Bahnschrift"/>
+        <Label Content="About how long do you sit?" HorizontalAlignment="Left" Height="30" Margin="199,117,0,0" VerticalAlignment="Top" Width="334" FontFamily="Bahnschrift"/>
+        <CheckBox x:Name= "goodposture" Content="Yes" HorizontalAlignment="Left" Margin="391,95,0,0" VerticalAlignment="Top" FontFamily="Bahnschrift"/>
+        <CheckBox x:Name= "badposture" Content="No" HorizontalAlignment="Left" Margin="516,93,0,0" VerticalAlignment="Top" FontFamily="Bahnschrift"/>
+        <CheckBox x:Name= "morethanthree" Content="More than 3hrs" HorizontalAlignment="Left" Margin="516,124,0,0" VerticalAlignment="Top" FontFamily="Bahnschrift" RenderTransformOrigin="0.027,0.83"/>
+        <CheckBox x:Name= "lessthanthree" Content="Less than 3hrs" HorizontalAlignment="Left" Margin="391,124,0,0" VerticalAlignment="Top" FontFamily="Bahnschrift"/>
 
     </Grid>
 </Window>
