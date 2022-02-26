@@ -17,6 +17,12 @@
         <CheckBox x:Name= "badposture" Content="No" HorizontalAlignment="Left" Margin="516,93,0,0" VerticalAlignment="Top" FontFamily="Bahnschrift"/>
         <CheckBox x:Name= "morethanthree" Content="More than 3hrs" HorizontalAlignment="Left" Margin="516,124,0,0" VerticalAlignment="Top" FontFamily="Bahnschrift" RenderTransformOrigin="0.027,0.83"/>
         <CheckBox x:Name= "lessthanthree" Content="Less than 3hrs" HorizontalAlignment="Left" Margin="391,124,0,0" VerticalAlignment="Top" FontFamily="Bahnschrift"/>
+        <Label x:Name="rightthigh" Content="Right Thigh Output: " HorizontalAlignment="Left" Margin="76,246,0,0" VerticalAlignment="Top" FontSize="16" FontFamily="Times New Roman"/>
+        <Label x:Name="leftthigh" Content="Left Thigh Output: " HorizontalAlignment="Left" Margin="528,246,0,0" VerticalAlignment="Top" FontSize="16" FontFamily="Times New Roman"/>
+        <Label x:Name="rightbutt" Content="Right Butt Output: " HorizontalAlignment="Left" Margin="529,353,0,0" VerticalAlignment="Top" FontSize="16" FontFamily="Times New Roman"/>
+        <Label x:Name="leftbutt" Content="Left Butt Output: " HorizontalAlignment="Left" Margin="86,353,0,0" VerticalAlignment="Top" FontSize="16" FontFamily="Times New Roman"/>
+        <Label x:Name="userdirection" Content="User Direction: " HorizontalAlignment="Left" Margin="330,260,0,0" VerticalAlignment="Top" FontSize="16" FontFamily="Times New Roman"/>
+
 
     </Grid>
 </Window>

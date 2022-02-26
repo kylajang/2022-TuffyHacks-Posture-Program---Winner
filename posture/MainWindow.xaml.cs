@@ -72,7 +72,90 @@ namespace posture
 
                 this.Dispatcher.Invoke(DispatcherPriority.Normal, new Action(() =>
                 {
-                    
+                    //connected to label and tells user to lean left, right, or forward based off right thigh input
+                    if (RightThigh < 945 && LeftThigh < 945)
+                    {
+                        rightthigh.Content = "Right Thigh Output: " + RightThigh.ToString();
+                        userdirection.Content = "\nlean forward";
+                    }
+                    else if (RightThigh < 945)
+                    {
+                        rightthigh.Content = "Right Thigh Output: " + RightThigh.ToString();
+                        userdirection.Content = "\nlean to the right";
+                    }
+                    else if (RightThigh > 955)
+                    {
+                        rightthigh.Content = "Right Thigh Output: " + RightThigh.ToString();
+                        userdirection.Content = "\nlean to the left";
+                    }
+                    else
+                    {
+                        rightthigh.Content = "Right Thigh Output: " + RightThigh.ToString();
+                        userdirection.Content = "\ngood posture";
+                    }
+                    //connected to label and tells user to lean left, right, or forward based off left thigh input
+                    if (RightThigh < 945 && LeftThigh < 945)
+                    {
+                        leftthigh.Content = "Left Thigh Output: " + LeftThigh.ToString();
+                        userdirection.Content = "\nlean forward";
+                    }
+                    else if (LeftThigh < 945)
+                    {
+                        leftthigh.Content = "Left Thigh Output: " + LeftThigh.ToString();
+                        userdirection.Content = "\nlean to the left";
+                    }
+                    else if (LeftThigh > 955)
+                    {
+                        leftthigh.Content = "Left Thigh Output: " + LeftThigh.ToString();
+                        userdirection.Content = "\nlean to the right";
+                    }
+                    else
+                    {
+                        leftthigh.Content = "Left Thigh Output: " + LeftThigh.ToString();
+                        userdirection.Content = "\ngood posture";
+                    }
+                    //connected to label and tells user to lean left, right, or back based off right butt input
+                    if (RightButt < 995 && LeftButt < 995)
+                    {
+                        rightbutt.Content = "Right Butt Output: " + RightButt.ToString();
+                        userdirection.Content = "\nlean back";
+                    }
+                    else if (RightButt < 995)
+                    {
+                        rightbutt.Content = "Right Butt Output: " + RightButt.ToString();
+                        userdirection.Content = "\nlean to the right";
+                    }
+                    else if (RightButt > 1005)
+                    {
+                        rightbutt.Content = "Right Butt Output: " + RightButt.ToString();
+                        userdirection.Content = "\nlean to the left";
+                    }
+                    else
+                    {
+                        rightbutt.Content = "Right Butt Output: " + RightButt.ToString();
+                        userdirection.Content = "\ngood posture";
+                    }
+                    //connected to labels and tells user to lean left, right, or back based off left butt input
+                    if (RightButt < 995 && LeftButt < 995)
+                    {
+                        leftbutt.Content = "Left Butt Output: " + LeftButt.ToString();
+                        userdirection.Content = "\nlean back";
+                    }
+                    else if (LeftButt < 995)
+                    {
+                        leftbutt.Content = "Left Butt Output: " + LeftButt.ToString();
+                        userdirection.Content = "\nlean to the left";
+                    }
+                    else if (LeftButt > 1005)
+                    {
+                        leftbutt.Content = "Left Butt Output: " + LeftButt.ToString();
+                        userdirection.Content = "\nlean to the right";
+                    }
+                    else
+                    {
+                        leftbutt.Content = "Left Butt Output: " + LeftButt.ToString();
+                        userdirection.Content = "\ngood posture";
+                    }
 
                 }));
             }
@@ -86,7 +169,7 @@ namespace posture
         {
             if (((bool)goodposture.IsChecked && !((bool)morethanthree.IsChecked)))
             {
-                string file = @"C:\Users\ky\source\repos\posture\SurveyInput.txt";
+                string file = @"C:\Users\casti\source\repos\posture\SurveyInput.txt";
                 string text = "This user believes they have good posture and they sit for less than 3 hours";
                 File.WriteAllText(file, text);
                 Console.WriteLine(File.ReadAllText(file));
@@ -94,7 +177,7 @@ namespace posture
             }
             else if (((bool)goodposture.IsChecked && !((bool)lessthanthree.IsChecked)))
             {
-                string file = @"C:\Users\ky\source\repos\posture\SurveyInput.txt";
+                string file = @"C:\Users\casti\source\repos\posture\SurveyInput.txt";
                 string text = "This user believes they have good posture and they sit for more than 3 hours.";
                 File.WriteAllText(file, text);
                 Console.WriteLine(File.ReadAllText(file));
@@ -102,7 +185,7 @@ namespace posture
             }
             else if (((bool)badposture.IsChecked && !((bool)lessthanthree.IsChecked)))
             {
-                string file = @"C:\Users\ky\source\repos\posture\SurveyInput.txt";
+                string file = @"C:\Users\casti\source\repos\posture\SurveyInput.txt";
                 string text = "This user believes they have bad posture and they sit for less than 3 hours.";
                 File.WriteAllText(file, text);
                 Console.WriteLine(File.ReadAllText(file));
@@ -110,7 +193,7 @@ namespace posture
             }
             else if (((bool)badposture.IsChecked && !((bool)morethanthree.IsChecked)))
             {
-                string file = @"C:\Users\ky\source\repos\posture\SurveyInput.txt";
+                string file = @"C:\Users\casti\source\repos\posture\SurveyInput.txt";
                 string text = "This user believes they have bad posture and they sit for more than 3 hours.";
                 File.WriteAllText(file, text);
                 Console.WriteLine(File.ReadAllText(file));
