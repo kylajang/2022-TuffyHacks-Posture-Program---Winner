@@ -5,6 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
+using System.Windows.Threading;
 using System.Windows.Controls;
 using System.Windows.Data;
 using System.Windows.Documents;
@@ -53,6 +54,11 @@ namespace posture
             {
                 serialData = sensorPort.ReadLine();
                 Console.WriteLine(serialData);
+
+                this.Dispatcher.Invoke(DispatcherPriority.Normal, new Action(() =>
+                {
+                    sensorOutput.Content = "Sensor Data: " + serialData;
+                }));
             }
             catch (Exception ex)
             {

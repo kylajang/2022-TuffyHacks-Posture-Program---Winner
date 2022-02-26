@@ -7,6 +7,7 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
     <Grid>
-        
+        <Label x:Name="sensorOutput" Content="Sensor Output: " HorizontalAlignment="Left" Margin="82,52,0,0" VerticalAlignment="Top" FontSize="16"/>
+
     </Grid>
 </Window>
